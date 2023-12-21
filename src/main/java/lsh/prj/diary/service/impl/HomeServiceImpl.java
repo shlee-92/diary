@@ -1,5 +1,6 @@
 package lsh.prj.diary.service.impl;
 
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import lsh.prj.diary.domain.in.HomeInput;
 import lsh.prj.diary.domain.out.HomeOutput;
@@ -12,13 +13,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
+@RequiredArgsConstructor
 @Slf4j
 public class HomeServiceImpl implements HomeService {
     @Autowired
     private HomeMapper homeMapper;
 
     @Override
-    public List<HomeOutput> home(HomeInput str) {
+    public List<HomeOutput> selectHome(HomeInput str) throws Exception {
         List<HomeOutput> output = new ArrayList<HomeOutput>();
         output = homeMapper.selectHome(str);
 

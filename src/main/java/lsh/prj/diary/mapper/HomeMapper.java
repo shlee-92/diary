@@ -7,7 +7,6 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 @Mapper
-@Repository
 public interface HomeMapper {
-    public List<HomeOutput> selectHome(HomeInput str);
+    List<HomeOutput> selectHome(HomeInput str) throws Exception;
 }

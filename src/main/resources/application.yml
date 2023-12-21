@@ -1,6 +1,6 @@
 server:
-  address: localhost
-  port: 8689
+  # address: localhost
+  port : 8080
 
 logging:
   level:

@@ -26,7 +26,7 @@ jobs:
       - name: Cache docker layers
         uses: actions/cache@v2
         with:
-          path: /build/libs
+          path: ../../build/libs
           key: ${{ runner.os }}-buildx-${{ env.VERSION }}
           restore-keys: |
             ${{ runner.os }}-buildx-

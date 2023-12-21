@@ -22,7 +22,7 @@ public class MainController {
     @GetMapping("/select")
     public ResponseEntity<Object> selectContent(@RequestBody HomeInput input)
     {
-        log.info("################## HomeController.selectContent START ##################");
+        log.info("################## 1HomeController.selectContent START ##################");
 
         List<HomeOutput> result = new ArrayList<HomeOutput>();
 

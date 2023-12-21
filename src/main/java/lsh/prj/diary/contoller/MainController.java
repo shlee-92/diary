@@ -20,10 +20,10 @@ public class MainController {
     private final HomeService homeService;
 
     @GetMapping("/select")
-    public ResponseEntity<Object> selectEditorContent(@RequestBody HomeInput input)
+    public ResponseEntity<Object> selectContent(@RequestBody HomeInput input)
     {
-        log.info("################## selectEditorContent START ##################");
-        log.info("input param:: " + input.getAccId());
+        log.info("################## HomeController.selectContent START ##################");
+
         List<HomeOutput> result = new ArrayList<HomeOutput>();
 
         try {
@@ -32,13 +32,25 @@ public class MainController {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
         }
 
-        log.info("################## selectEditorContent END ##################");
+        log.info("################## HomeController.selectContent END ##################");
         return ResponseEntity.status(HttpStatus.OK).body(result);
     }
 
-    @PostMapping("/editor")
-    public ResponseEntity<Object> updateEditorContent(@RequestBody HomeInput input)
+    @PutMapping("/insert")
+    public ResponseEntity<Object> insertContent(@RequestBody HomeInput input)
     {
-        return ResponseEntity.status(HttpStatus.OK).body("success!!");
+        return ResponseEntity.status(HttpStatus.OK).body("insert!!");
+    }
+
+    @PostMapping("/update")
+    public ResponseEntity<Object> updateContent(@RequestBody HomeInput input)
+    {
+        return ResponseEntity.status(HttpStatus.OK).body("update!!");
+    }
+
+    @DeleteMapping("/delete")
+    public ResponseEntity<Object> deleteContent(@RequestBody HomeInput input)
+    {
+        return ResponseEntity.status(HttpStatus.OK).body("delete!!");
     }
 }

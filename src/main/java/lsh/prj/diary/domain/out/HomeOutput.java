@@ -2,11 +2,11 @@ package lsh.prj.diary.domain.out;
 
 import lombok.Getter;
 import lombok.Setter;
-import lsh.prj.diary.domain.ComCol;
+import lsh.prj.diary.domain.ComDomain;
 
 @Getter
 @Setter
-public class HomeOutput extends ComCol {
+public class HomeOutput extends ComDomain {
     private String accId;
 
     private String clnNo;

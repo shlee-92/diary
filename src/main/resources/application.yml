@@ -4,8 +4,8 @@ server:
 
 logging:
   level:
-    root: ${LOG_LEVEL}
-    lsh.*: ${LOG_LSH_LEVEL}
+    root: info
+    lsh.*: debug
     jdbc :
       # 쿼리 로그 관련 설정
       # jdbc.sqlonly - SQL 문을 보여준다.

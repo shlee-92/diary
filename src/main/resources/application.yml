@@ -37,7 +37,7 @@ spring:
     # driver-class-name: com.mysql.cj.jdbc.Driver
     # url: jdbc:mysql://localhost:3306/ide_dev
     driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
-    url : jdbc:log4jdbc:mysql://1.231.66.46:3306/ide_dev
+    url : jdbc:log4jdbc:mysql://localhost:3306/ide_dev
     username: seungho
     password: ahffkdy12#
 mybatis:
